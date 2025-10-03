@@ -872,8 +872,10 @@ namespace UnityEditor.Rendering.Universal.ShaderGraph
                 { CoreKeywordDescriptors.LightLayers },
                 { CoreKeywordDescriptors.DebugDisplay },
                 { CoreKeywordDescriptors.LightCookies },
-#if UNITY_2022_2_OR_NEWER
-                { CoreKeywordDescriptors.ForwardPlus },
+#if UNITY_6000_1_OR_NEWER
+              { CoreKeywordDescriptors.ClusterLightLoop },
+#elif UNITY_2022_2_OR_NEWER
+              { CoreKeywordDescriptors.ForwardPlus },
 #else
                 { CoreKeywordDescriptors.ClusteredRendering },
 #endif
